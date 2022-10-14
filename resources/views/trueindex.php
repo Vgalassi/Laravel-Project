@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-danger bg-light ">
     <div class="container my-4">
-      <a href="{{ route('trueindex') }}" class="navbar-brand"><h1 class="laravelred">Laravel Project</h1></a>
+      <a href="trueindex.php" class="navbar-brand"><h1 class="laravelred">Laravel Project</h1></a>
 
       <button
         class="navbar-toggler"
@@ -50,7 +50,7 @@
 
             </div>
             <div class="col-7">
-                <img src="images/arvre.png" alt="guy programming in laravel image" class="img-fluid" image>
+                <img src="images/image_test.jpg" alt="guy programming in laravel image" class="img-fluid" image>
 
             </div>
           </div>
