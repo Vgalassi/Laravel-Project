@@ -21,5 +21,3 @@ Route::get('/', function () {
 Route::resource('alunos',AlunosController::class);
 
 Route::resource('professores',ProfessorController::class);
-
-//xd
