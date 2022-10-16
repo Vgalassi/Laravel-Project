@@ -30,7 +30,7 @@
             <h2>Adicione nova materia</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('materias.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('materias.index') }}"> Voltar</a>
         </div>
     </div>
 </div>

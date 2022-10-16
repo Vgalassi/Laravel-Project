@@ -28,7 +28,7 @@
             <a href="profs" class="nav-link mx-4" >Professores</a>
           </li>
           <li class="nav-item">
-            <a href="materias" class="nav-link mx-4" >Matérias</a>
+            <a href="materias" class="nav-link mx-4" target="_blank">Matérias</a>
           </li>
           <li class="nav-item">
             <a href="alunos" class="nav-link mx-4" >Alunos</a>
@@ -58,16 +58,35 @@
        </main>
 
         <section class=" p-5 text-center my-4">
-            <div class="container">
+            <div class="container d-flex align-items-center justify-content-center">
               <div class="d-sm-flex">
                 <div class="text-center">
-                    <p class = "title my-4">Como Utilizar?</p>
-                    <p class="subtexto my2"> Para realizar o CRUD basta clickar na barra de navegação acima ou nos botões abaixo
-                    </p>
+                    <p class = "title my-2">Como Utilizar?</p>
+                    <p class="subtexto my-4"> Para escolher uma tabela para realizar o CRUD clique na barra de navagação acima ou nos botões abaixo
+                    <div class="row">
+                      <div class="col-lg-4 margin-tb">
+                          <div class="pull-right">
+                            <a class="btn btn-danger" href="profs"> Professores</a>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 margin-tb">
+                        <div class="pull-right">
+                            <a class="btn btn-danger" href="materias"> Matérias</a>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 margin-tb">
+                        <div class="pull-right">
+                          <a class="btn btn-danger" href="alunos"> Alunos</a>
+                        </div>
+                      </div>
+                    </div>
+
+
+
             
     
     
-                </div>
+              </div>
               </div>
             </div>
     

@@ -65,6 +65,12 @@
                 <input type="number" name="RA" class="form-control" placeholder="RA">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Filmes:</strong>
+                <textarea class="form-control" style="height:150px" name="filmes" placeholder="Filmes"></textarea>
+            </div>
+        </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary my-4">Enviar</button>

@@ -85,6 +85,7 @@ class AlunosController extends Controller
             $request->validate([
                 'nome'=> 'required',   //required significa que esse input é obrigatório(não pode ser Nulo)
                 'RA'=> 'required'
+        
                 
                 ]);
         

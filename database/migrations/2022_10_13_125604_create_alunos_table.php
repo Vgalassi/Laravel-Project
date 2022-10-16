@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('RA');
             $table->string('nome');
+            $table->string('filmes');
             $table->timestamps();
         });
     }

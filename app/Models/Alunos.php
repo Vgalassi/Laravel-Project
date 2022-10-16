@@ -10,6 +10,7 @@ class Alunos extends Model
     use HasFactory;
     protected $fillable = [
         'nome',
-        'RA'
+        'RA',
+        'filmes'
     ];
 }
