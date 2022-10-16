@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Alunos;
+use App\Models\Prof;
 use Illuminate\Http\Request;
 
-class AlunosController extends Controller
+class ProfController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class AlunosController extends Controller
      */
     public function index()
     {
-        $alunos = Alunos::latest()->paginate(5);
-        return view('alunos.index',compact('alunos'))->with(request()->input('page'));
+        $profs = Prof::latest()->paginate(5);
+        return view('profs.index',compact('profs'))->with(request()->input('page'));
     }
 
     /**
@@ -25,7 +25,7 @@ class AlunosController extends Controller
      */
     public function create()
     {
-        return view ('alunos.create');
+        return view ('profs.create');
     }
 
     /**
@@ -39,73 +39,72 @@ class AlunosController extends Controller
         //validando o input
         $request->validate([
             'nome'=> 'required',   //required significa que esse input é obrigatório(não pode ser Nulo)
-            'RA'=> 'required'
+            'RP'=> 'required'
         
         ]);
 
         //adicionando novo aluno
-        Alunos::create($request->all()); ///esse comando cria o aluno na databse
+        Prof::create($request->all()); ///esse comando cria o aluno na databse
 
         ///orientando o usuário
-        return redirect()->route('alunos.index')->with('Sucesso','Aluno adicionado com sucesso');
+        return redirect()->route('profs.index')->with('Sucesso','Professor adicionada com sucesso');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Prof  $prof
      * @return \Illuminate\Http\Response
      */
-    public function show(Alunos $aluno)
+    public function show(Prof $prof)
     {
-        return view('alunos.show', compact ('aluno'));
+        return view('profs.show',compact('prof'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Prof  $prof
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alunos $aluno)
+    public function edit(Prof $prof)
     {
-        return view('alunos.edit', compact('aluno'));
+        return view('profs.edit',compact('prof'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Prof  $prof
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alunos $aluno)
+    public function update(Request $request, Prof $prof)
     {
-            //validando o input
-            $request->validate([
+             //validando o input
+             $request->validate([
                 'nome'=> 'required',   //required significa que esse input é obrigatório(não pode ser Nulo)
-                'RA'=> 'required'
+                'RP'=> 'required'
                 
                 ]);
         
             //adicionando novo aluno
-            $aluno->update($request->all()); ///esse comando faz o update do aluno na databse
+            $prof->update($request->all()); ///esse comando faz o update do aluno na databse
         
             ///orientando o usuário
-            return redirect()->route('alunos.index')->with('Sucesso','Aluno adicionado com sucesso');
+            return redirect()->route('profs.index')->with('Sucesso','Professor adicionado com sucesso');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Prof  $prof
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alunos $aluno)
+    public function destroy(Prof $prof)
     {
-        $aluno->delete();
+        $prof->delete();
 
-        return redirect()->route('alunos.index')->with('Sucesso','Aluno deletado');
-
+        return redirect()->route('profs.index')->with('Sucesso','Professor deletado');
     }
 }

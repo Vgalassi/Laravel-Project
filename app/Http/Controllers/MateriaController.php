@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Alunos;
+use App\Models\Materia;
 use Illuminate\Http\Request;
 
-class AlunosController extends Controller
+class MateriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class AlunosController extends Controller
      */
     public function index()
     {
-        $alunos = Alunos::latest()->paginate(5);
-        return view('alunos.index',compact('alunos'))->with(request()->input('page'));
+        $materias = Materia::latest()->paginate(5);
+        return view('materias.index',compact('materias'))->with(request()->input('page'));
     }
 
     /**
@@ -25,7 +25,7 @@ class AlunosController extends Controller
      */
     public function create()
     {
-        return view ('alunos.create');
+        return view ('materias.create');
     }
 
     /**
@@ -39,73 +39,72 @@ class AlunosController extends Controller
         //validando o input
         $request->validate([
             'nome'=> 'required',   //required significa que esse input é obrigatório(não pode ser Nulo)
-            'RA'=> 'required'
+            'mat_id'=> 'required'
         
         ]);
 
         //adicionando novo aluno
-        Alunos::create($request->all()); ///esse comando cria o aluno na databse
+        Materia::create($request->all()); ///esse comando cria o aluno na databse
 
         ///orientando o usuário
-        return redirect()->route('alunos.index')->with('Sucesso','Aluno adicionado com sucesso');
+        return redirect()->route('materias.index')->with('Sucesso','Materia adicionada com sucesso');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function show(Alunos $aluno)
+    public function show(Materia $materia)
     {
-        return view('alunos.show', compact ('aluno'));
+        return view('materias.show',compact('materia'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alunos $aluno)
+    public function edit(Materia $materia)
     {
-        return view('alunos.edit', compact('aluno'));
+        return view('materias.edit',compact('materia'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alunos $aluno)
+    public function update(Request $request, Materia $materia)
     {
-            //validando o input
-            $request->validate([
+             //validando o input
+             $request->validate([
                 'nome'=> 'required',   //required significa que esse input é obrigatório(não pode ser Nulo)
-                'RA'=> 'required'
+                'mat_id'=> 'required'
                 
                 ]);
         
             //adicionando novo aluno
-            $aluno->update($request->all()); ///esse comando faz o update do aluno na databse
+            $materia->update($request->all()); ///esse comando faz o update do aluno na databse
         
             ///orientando o usuário
-            return redirect()->route('alunos.index')->with('Sucesso','Aluno adicionado com sucesso');
+            return redirect()->route('materias.index')->with('Sucesso','Materia adicionada com sucesso');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Alunos  $alunos
+     * @param  \App\Models\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alunos $aluno)
+    public function destroy(Materia $materia)
     {
-        $aluno->delete();
+        $materia->delete();
 
-        return redirect()->route('alunos.index')->with('Sucesso','Aluno deletado');
-
+        return redirect()->route('materias.index')->with('Sucesso','Materia deletado');
     }
 }

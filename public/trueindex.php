@@ -25,10 +25,10 @@
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link mx-4" >Professores</a>
+            <a href="professores" class="nav-link mx-4" >Professores</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link mx-4" target="_blank">Matérias</a>
+            <a href="materias" class="nav-link mx-4" >Matérias</a>
           </li>
           <li class="nav-item">
             <a href="alunos" class="nav-link mx-4" >Alunos</a>

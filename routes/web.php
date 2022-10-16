@@ -1,5 +1,6 @@
 <?php
-use App\http\Controllers\ProfessorController;
+use App\http\Controllers\ProfController;
+use App\http\Controllers\MateriaController;
 use App\http\Controllers\AlunosController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,6 @@ Route::get('/', function () {
 
 Route::resource('alunos',AlunosController::class);
 
-Route::resource('professores',ProfessorController::class);
+Route::resource('profs',ProfController::class);
+
+Route::resource('materias',MateriaController::class);
