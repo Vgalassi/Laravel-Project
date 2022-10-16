@@ -10,6 +10,14 @@ class Prof extends Model
     use HasFactory;
     protected $fillable = [
         'nome',
-        'RP'
+        'RP',
+        'prof_mat'
     ];
+
+    public function materia(){
+
+    return $this->hasOne(Materia::class, 'mat_id','prof_mat');
+    }
+
 }
+

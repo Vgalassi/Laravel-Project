@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
             $table->integer('RP');
             $table->string('nome');
+            $table->integer('prof_mat');
             $table->timestamps();
+
+            
         });
     }
 

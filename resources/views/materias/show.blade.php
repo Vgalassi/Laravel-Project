@@ -30,7 +30,7 @@
                 <h2> Mostrar Matéria</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('materias.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('materias.index') }}"> Voltar</a>
             </div>
         </div>
     </div>
@@ -49,4 +49,7 @@
             </div>
         </div>
     </div>
+    @if ($materia->prof)
+    <p><strong>Professor: </strong>{{ $materia->prof->nome }}</p>
+    @endif
 @endsection

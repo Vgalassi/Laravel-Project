@@ -49,4 +49,9 @@
             </div>
         </div>
     </div>
+    @if ($prof->materia)
+    <p><strong>Matéria aplicada: </strong>{{ $prof->materia->nome }}</p>
+    @endif
+        
+    
 @endsection

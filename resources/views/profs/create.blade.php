@@ -62,6 +62,12 @@
                 <input type="number" name="RP" class="form-control" placeholder="RP">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Id da Matéria aplicada:</strong>
+                <input type="number" name="prof_mat" class="form-control" placeholder="Matéria Aplicada">
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary my-4">Enviar</button>
         </div>

@@ -12,4 +12,11 @@ class Materia extends Model
         'nome',
         'mat_id'
     ];
+
+    public function prof()
+    {
+        return $this->belongsTo(Prof::class,'mat_id','prof_mat');
+    } 
+
 }
+

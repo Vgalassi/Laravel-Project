@@ -18,6 +18,8 @@ return new class extends Migration
             $table->integer('mat_id');
             $table->string('nome');
             $table->timestamps();
+
+
         });
     }
 

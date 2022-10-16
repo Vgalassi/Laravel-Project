@@ -28,7 +28,7 @@
             <a href="profs" class="nav-link mx-4" >Professores</a>
           </li>
           <li class="nav-item">
-            <a href="materias" class="nav-link mx-4" target="_blank">Matérias</a>
+            <a href="materias" class="nav-link mx-4">Matérias</a>
           </li>
           <li class="nav-item">
             <a href="alunos" class="nav-link mx-4" >Alunos</a>
