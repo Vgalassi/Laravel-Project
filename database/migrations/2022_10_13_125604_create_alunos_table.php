@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('RA');
             $table->string('nome');
             $table->string('filmes');
+            $table->integer('alu_mat');
             $table->timestamps();
         });
     }

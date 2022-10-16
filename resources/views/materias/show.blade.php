@@ -48,8 +48,18 @@
                 {{ $materia->mat_id }}
             </div>
         </div>
-    </div>
-    @if ($materia->prof)
-    <p><strong>Professor: </strong>{{ $materia->prof->nome }}</p>
-    @endif
+    </div> 
+        @if ($materia->prof)
+        <p><strong>Professor: </strong>{{ $materia->prof->nome }}</p>
+        @endif
+        @if ($materia->alunos)
+        <strong>Alunos: </strong>
+        <br>
+        @foreach ($materia->alunos as $alunos)
+        {{ $alunos->nome }}
+        <br>
+        @endforeach
+        @endif
+       
+    
 @endsection

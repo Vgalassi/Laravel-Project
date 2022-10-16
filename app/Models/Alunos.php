@@ -11,6 +11,12 @@ class Alunos extends Model
     protected $fillable = [
         'nome',
         'RA',
+        'alu_mat',
         'filmes'
     ];
+
+    public function materia()
+    {
+        return $this->belongsTo(Materia::class,'alu_mat','mat_id');
+    }
 }

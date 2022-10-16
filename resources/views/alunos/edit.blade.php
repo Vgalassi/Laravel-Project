@@ -65,6 +65,12 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Id da matéria cursada:</strong>
+                    <input type="number" name="alu_mat" value="{{ $aluno->alu_mat }}" class="form-control" placeholder="Id Matéria">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Filmes:</strong>
                     <textarea class="form-control" style="height:150px" name="filmes" placeholder="Filmes">{{ $aluno->filmes }}</textarea>
                 </div>
