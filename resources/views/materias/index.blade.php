@@ -46,8 +46,8 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>mat_id</th>
-            <th width="280px">Action</th>
+            <th>Id da matéria</th>
+            <th width="280px">Ação</th>
         </tr>
         @foreach ($materias as $materia)
         <tr>
@@ -56,11 +56,11 @@
             <td>{{ $materia->mat_id }}</td>
             <td>
                 <form action="{{ route('materias.destroy',$materia->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('materias.show',$materia->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('materias.edit',$materia->id) }}">Edit</a>
+                    <a class="btn btn-info" href="{{ route('materias.show',$materia->id) }}">Ver</a>
+                    <a class="btn btn-primary" href="{{ route('materias.edit',$materia->id) }}">Editar</a>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Deletar</button>
                 </form>
             </td>
         </tr>

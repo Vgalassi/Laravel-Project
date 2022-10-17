@@ -47,7 +47,7 @@
             <th>ID</th>
             <th>Nome</th>
             <th>RP</th>
-            <th width="280px">Action</th>
+            <th width="280px">Ação</th>
         </tr>
         @foreach ($profs as $prof)
         <tr>
@@ -56,11 +56,11 @@
             <td>{{ $prof->RP }}</td>
             <td>
                 <form action="{{ route('profs.destroy',$prof->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('profs.show',$prof->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('profs.edit',$prof->id) }}">Edit</a>
+                    <a class="btn btn-info" href="{{ route('profs.show',$prof->id) }}">Ver</a>
+                    <a class="btn btn-primary" href="{{ route('profs.edit',$prof->id) }}">Editar</a>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Deletar</button>
                 </form>
             </td>
         </tr>

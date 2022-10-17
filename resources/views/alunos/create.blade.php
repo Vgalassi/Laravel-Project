@@ -40,7 +40,7 @@
 
 @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>Erro:</strong> deu ruim.<br><br>
+        <strong>Erro:</strong> Verifique seu input.<br><br>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>

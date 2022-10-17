@@ -44,7 +44,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Mat_Id:</strong>
+                <strong>Id da matéria:</strong>
                 {{ $materia->mat_id }}
             </div>
         </div>

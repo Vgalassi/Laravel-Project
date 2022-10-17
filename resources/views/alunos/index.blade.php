@@ -47,7 +47,7 @@
             <th>ID</th>
             <th>Nome</th>
             <th>RA</th>
-            <th width="280px">Action</th>
+            <th width="280px">Ação</th>
         </tr>
         @foreach ($alunos as $aluno)
         <tr>
@@ -56,11 +56,11 @@
             <td>{{ $aluno->RA }}</td>
             <td>
                 <form action="{{ route('alunos.destroy',$aluno->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('alunos.show',$aluno->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('alunos.edit',$aluno->id) }}">Edit</a>
+                    <a class="btn btn-info" href="{{ route('alunos.show',$aluno->id) }}">Ver</a>
+                    <a class="btn btn-primary" href="{{ route('alunos.edit',$aluno->id) }}">Editar</a>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Deletar</button>
                 </form>
             </td>
         </tr>

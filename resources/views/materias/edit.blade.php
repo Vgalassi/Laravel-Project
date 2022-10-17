@@ -37,7 +37,7 @@
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Erro:</strong> Verifique seu input<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Mat_Id:</strong>
+                    <strong>Id da matéria:</strong>
                     <input type="number" name="mat_id" value="{{ $materia->mat_id }}" class="form-control" placeholder="Mat_Id">
                 </div>
             </div>

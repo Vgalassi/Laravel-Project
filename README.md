@@ -1,8 +1,8 @@
 
-# Laravel Template
+# Laravel Project
 
 ### Passo a passo
-Clone Repositório criado a partir do template, entre na pasta e execute os comandos abaixo:
+Clone Repositório criado, entre na pasta e execute os comandos abaixo:
 
 Crie o Arquivo .env
 ```sh
@@ -49,11 +49,4 @@ Acesse o projeto
 Acesse o phpmyadmin
 [http://localhost:8081](http://localhost:8081)
 
-API de categorias e filmes:
-https://www.learn-laravel.cf/
 
-Rotas:
-- (get) /categories
-- (get) /category/{id}
-- (get) /movies
-- (get) /movie/{id}
