@@ -42,6 +42,9 @@ Gerar a key do projeto Laravel
 php artisan key:generate
 ```
 
+Inicializar as tabelas
+```
+php artisan migrate:refresh
 
 Acesse o projeto
 [http://localhost:8080](http://localhost:8080)
